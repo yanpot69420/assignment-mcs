@@ -20,6 +20,7 @@ public class HomeActivity extends AppCompatActivity implements ProductsListener{
     static ArrayList<Products> dataProduct = new ArrayList<>();
     static Calendar calendar = Calendar.getInstance();
     static String currentDate;
+    String anton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
