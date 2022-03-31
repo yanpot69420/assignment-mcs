@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp"
+    android:layout_marginHorizontal="8dp"
+    android:layout_marginVertical="3dp"
+    android:background="@drawable/outline_transact">
+
+    <ImageView
+        android:id="@+id/trImage"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@color/yellow"/>
+
+    <LinearLayout
+        android:layout_width="80dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/trID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/dark_grey"
+            android:textSize="20sp"
+            android:text="TRID0"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="8dp"
+        android:orientation="vertical"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/trName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/dark_grey"
+            android:text="Furniture Name"/>
+        <TextView
+            android:id="@+id/trQuant"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/dark_grey"
+            android:layout_marginVertical="3dp"
+            android:text="Quantity"/>
+        <TextView
+            android:id="@+id/trTprice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/dark_grey"
+            android:text="Total Price"/>
+        <TextView
+            android:id="@+id/trDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/dark_grey"
+            android:text="Transaction Date"/>
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingVertical="10dp"
+    android:paddingHorizontal="40dp"
+    android:background="@color/white"
+    android:id="@+id/main_container">
+
+
+    <ImageView
+        android:id="@+id/pImage"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:src="@mipmap/ic_launcher"/>
+
+    <LinearLayout
+        android:layout_marginStart="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/pName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Product Name"
+            android:textSize="20sp"
+            android:fontFamily="@font/poppins_regular"/>
+
+        <RatingBar
+            android:id="@+id/pRating"
+            style="@style/Widget.AppCompat.RatingBar.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:progressTint="@color/yellow"
+            android:layout_marginVertical="3dp"/>
+
+        <TextView
+            android:id="@+id/pPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Price"
+            android:textSize="15sp"
+            android:fontFamily="@font/poppins_regular"/>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
