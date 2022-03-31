@@ -4,7 +4,7 @@
     android:layout_height="wrap_content"
     android:orientation="horizontal"
     android:paddingVertical="10dp"
-    android:paddingHorizontal="40dp"
+    android:paddingHorizontal="30dp"
     android:background="@color/white"
     android:id="@+id/main_container">
 
@@ -16,7 +16,7 @@
         android:src="@mipmap/ic_launcher"/>
 
     <LinearLayout
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="30dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">

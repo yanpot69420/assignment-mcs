@@ -48,6 +48,7 @@ public class HomeActivity extends AppCompatActivity implements ProductsListener{
             case R.id.redirect:
                 Intent redirect = new Intent(HomeActivity.this, HomeActivity.class);
                 startActivity(redirect);
+                finish();
                 break;
             case R.id.history:
                 Intent history = new Intent(HomeActivity.this, HistoryActivity.class);
