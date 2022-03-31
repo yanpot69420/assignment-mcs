@@ -20,11 +20,13 @@ public class HomeActivity extends AppCompatActivity implements ProductsListener{
     static ArrayList<Products> dataProduct = new ArrayList<>();
     static Calendar calendar = Calendar.getInstance();
     static String currentDate;
+    static Integer userIndex;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         currentDate = DateFormat.getDateInstance().format(calendar.getTime());
+        userIndex = getIndex();
         initProduct(dataProduct);
         initView();
         ProductsAdapter productsAdapter = new ProductsAdapter(HomeActivity.this, dataProduct, HomeActivity.this);
@@ -96,5 +98,13 @@ public class HomeActivity extends AppCompatActivity implements ProductsListener{
     protected void onStart() {
         super.onStart();
         tvUsername.setText(LoginActivity.userLog.userName);
+    }
+
+    Integer getIndex(){
+        for (int i = 0; i < LoginActivity.userData.size(); i++) {
+            if(LoginActivity.userLog.userEmail.equals(LoginActivity.userData.get(i).userEmail))
+                return i;
+        }
+        return -1;
     }
 }

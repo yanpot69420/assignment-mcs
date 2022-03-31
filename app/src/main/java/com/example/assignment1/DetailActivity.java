@@ -75,7 +75,6 @@ public class DetailActivity extends AppCompatActivity {
         String dtName = tvPdName.getText().toString();
         Integer dtPrice = Integer.valueOf(tvPdPrice.getText().toString());
         Integer dtImage = refImage;
-
         btnBuy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -84,7 +83,7 @@ public class DetailActivity extends AppCompatActivity {
                 else {
                     Integer quantity = number;
                     buyDetail = new Historys(dtImage, dtGen, dtName, quantity, quantity*dtPrice, HomeActivity.currentDate);
-                    HistoryActivity.historyList.add(new Historys(buyDetail));
+                    LoginActivity.userData.get(HomeActivity.userIndex).userTransaction.add(new Historys(buyDetail));
                     Toast.makeText(DetailActivity.this, "Detail added to transaction", Toast.LENGTH_SHORT).show();
                 }
             }

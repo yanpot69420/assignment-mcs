@@ -18,7 +18,7 @@ public class HistoryActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_history);
         initView();
-
+        historyList = LoginActivity.userData.get(HomeActivity.userIndex).userTransaction;
         if(historyList.isEmpty()) {
             kosong.setVisibility(View.VISIBLE);
         }
