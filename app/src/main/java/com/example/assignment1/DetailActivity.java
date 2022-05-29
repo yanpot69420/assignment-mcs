@@ -1,6 +1,9 @@
 package com.example.assignment1;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -83,8 +86,24 @@ public class DetailActivity extends AppCompatActivity {
                 else {
                     Integer quantity = number;
                     buyDetail = new Historys(dtImage, dtGen, dtName, quantity, quantity*dtPrice, HomeActivity.currentDate);
-                    LoginActivity.userData.get(HomeActivity.userIndex).userTransaction.add(new Historys(buyDetail));
-                    Toast.makeText(DetailActivity.this, "Detail added to transaction", Toast.LENGTH_SHORT).show();
+                    AlertDialog.Builder builder = new AlertDialog.Builder(DetailActivity.this);
+                    builder.setIcon(R.drawable.ic_baseline_event_seat_24)
+                            .setMessage("Press Yes to buy this item")
+                            .setCancelable(true)
+                            .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialogInterface, int i) {
+                                    LoginActivity.userData.get(HomeActivity.userIndex).userTransaction.add(new Historys(buyDetail));
+                                    Toast.makeText(DetailActivity.this, "Detail added to transaction", Toast.LENGTH_SHORT).show();
+                                }
+                            })
+                            .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialogInterface, int i) {
+                                    dialogInterface.cancel();
+                                }
+                            })
+                            .show();
                 }
             }
         });
