@@ -87,8 +87,7 @@ public class DetailActivity extends AppCompatActivity {
                     Integer quantity = number;
                     buyDetail = new Historys(dtImage, dtGen, dtName, quantity, quantity*dtPrice, HomeActivity.currentDate);
                     AlertDialog.Builder builder = new AlertDialog.Builder(DetailActivity.this);
-                    builder.setIcon(R.drawable.ic_baseline_event_seat_24)
-                            .setMessage("Press Yes to buy this item")
+                    builder.setMessage("Press Yes to buy this item")
                             .setCancelable(true)
                             .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                                 @Override
